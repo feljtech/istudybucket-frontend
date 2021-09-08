@@ -2,16 +2,22 @@
 Frontend repository for the iStudyBucket web app
 ### Setup
 
-Simply `clone` this repo on your pc, by typing out this command on your terminal.
+Simply `fork` this repo to your own repo, by typing out this command on your terminal.
+Now clone the `fork` to your local pc.
+1. `cd` into `istudybucket-frontend`
+2. add upstream as a remote repository by typing use the `git remote add https://github.com/feljtech/istudybucket-frontend.git`
+3. Check that you have two remote versions using the cmd `git remote -v`
+4. Now run  `git fetch upstream` to fetch for changes from `upstream`
+5. Now run  `git pull upstream main` to pull latest changes from `main/upstream branch`
+6. Then run `yarn install` to install all the latest requisite dependencies.
+7. `git checkout <branch-name>` to switch to working branch or `git checkout -b <branch-name>` to create and switch to a new branch.
+8. To start the server just type `yarn start` and it will start up the server.
 
-- `git clone https://github.com/feljtech/istudybucket-frontend.git`
-- `cd` into `istudybucket-frontend`
-- Then run `yarn install` to install all the requisite dependencies.
-- To start the server just type `yarn start` and it will start up the server.
+Repeat step `4-6` each time you commit changes and before you push to `origin`
 
 ### Contributing
 
-1. Before working on any task, you are meant to pull the latest changes from the `main` branch, then create a separate branch to work on that particular task.
+1. Before working on any task, you are meant to pull the latest changes from the `main` branch, then create a separate branch to work on that particular task. Briefly described above
 
 ## Coding Guide
 
@@ -71,8 +77,6 @@ const User = ({props}) => {
         <>{props.username} </>
     )
 }
-
-
 export default ProfilePage;
 ```
 
