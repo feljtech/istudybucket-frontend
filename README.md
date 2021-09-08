@@ -63,7 +63,7 @@ All `js` scripts must follow the `es6` syntax (except for the default export Com
 For example:
 `ProfilePage.js`
 
-```
+```javascript
 import React from 'react';
 
 function ProfilePage(props) {
