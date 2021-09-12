@@ -5,7 +5,7 @@ Frontend repository for the iStudyBucket web app
 Simply `fork` this repo to your own repo, by typing out this command on your terminal.
 Now clone the `fork` to your local pc.
 1. `cd` into `istudybucket-frontend`
-2. add upstream as a remote repository by typing use the `git remote add https://github.com/feljtech/istudybucket-frontend.git`
+2. add upstream as a remote repository by typing use the `git remote add upstream https://github.com/feljtech/istudybucket-frontend.git`
 3. Check that you have two remote versions using the cmd `git remote -v`
 4. Now run  `git fetch upstream` to fetch for changes from `upstream`
 5. Now run  `git pull upstream main` to pull latest changes from `main/upstream branch`
