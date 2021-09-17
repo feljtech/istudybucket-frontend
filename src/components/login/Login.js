@@ -11,7 +11,7 @@ function Login() {
       <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="border shadow rounded p-5 max-w-md w-full space-y-8">
           <div>
-            <h2 className="mt-6 text-center text-2xl font-bold text-blue-500">
+            <h2 className="mt-6 text-center text-2xl font-bold text-green-500">
               Sign in to your account
             </h2>
           </div>
@@ -29,7 +29,7 @@ function Login() {
                   type="email"
                   autoComplete="email"
                   required
-                  className={styles.input}
+                  className="appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm"
                   placeholder="Email address"
                 />
                 <div className="mt-6">
@@ -43,21 +43,21 @@ function Login() {
                       type={!showPassword && "password"}
                       autoComplete="current-password"
                       required
-                      className={styles.input}
+                      className="appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm"
                       placeholder="Password"
                     />
                     <span className="absolute z-10 right-1 inset-y-0 flex items-center pl-3">
                       {showPassword && (
                         <EyeIcon
                           onClick={(e) => setShowPassword(!showPassword)}
-                          className={styles.eyeIcon}
+                          className="h-5 w-5 text-green-500 group-hover:text-green-400"
                           aria-hidden="true"
                         />
                       )}
                       {!showPassword && (
                         <EyeOffIcon
                           onClick={(e) => setShowPassword(!showPassword)}
-                          className={styles.eyeIcon}
+                          className="h-5 w-5 text-green-500 group-hover:text-green-400"
                           aria-hidden="true"
                         />
                       )}
@@ -73,7 +73,7 @@ function Login() {
                   id="remember-me"
                   name="remember-me"
                   type="checkbox"
-                  className="h-4 w-4 text-blue-500 focus:ring-blue-50 border-gray-300 rounded"
+                  className="h-4 w-4 text-green-500 focus:ring-green-50 border-gray-300 rounded"
                 />
                 <label
                   htmlFor="remember-me"
@@ -86,7 +86,7 @@ function Login() {
               <div className="text-sm">
                 <a
                   href="#"
-                  className="font-medium text-blue-600 hover:text-blue-500"
+                  className="font-medium text-gray-600 hover:text-gray-500"
                 >
                   Forgot your password?
                 </a>
@@ -96,7 +96,7 @@ function Login() {
             <div>
               <button
                 type="submit"
-                className="group uppercase font-semibold relative w-full flex justify-center py-2 px-4 border border-transparent text-sm rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="group uppercase font-semibold relative w-full flex justify-center py-2 px-4 border border-transparent text-sm rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
               >
                 Sign in
               </button>
@@ -105,7 +105,7 @@ function Login() {
                 Or{" "}
                 <a
                   href="#"
-                  className="font-medium text-blue-600 hover:text-blue-500"
+                  className="font-medium text-green-600 hover:text-green-500"
                 >
                   Create your free account
                 </a>
@@ -118,12 +118,11 @@ function Login() {
                   <FaFacebook />
                 </div>
                 <div className="border py-2 px-6 mx-3 cursor-pointer hover:bg-gray-300 rounded-2xl">
-                <FaGithub />
+                  <FaGithub />
                 </div>
                 <div className="border py-2 px-6 mx-3 cursor-pointer hover:bg-gray-300 rounded-2xl">
-                <FaGoogle />
+                  <FaGoogle />
                 </div>
-  
               </div>
             </div>
           </form>

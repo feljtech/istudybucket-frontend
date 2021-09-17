@@ -24,7 +24,7 @@
   top: 50%;
   z-index: -2;
 }
-
+/* 
 .input {
   @apply appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm;
 }
@@ -38,4 +38,4 @@
 
 .hobby {
   @apply ml-1 block text-sm text-gray-900;
-}
+} */
