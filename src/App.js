@@ -1,16 +1,20 @@
-import React from 'react';
-import { LockClosedIcon, EyeIcon, EyeOffIcon } from '@heroicons/react/solid'
-
+import React from "react";
+import Login from "./components/login/Login";
+import './App.css'
 
 function App() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
+
      <h2 className="mt-6 text-center text-2xl font-bold text-blue-500">iStudyBucket.Go through the readme.md.</h2>
-=======
+
     <div className="border p-5 max-w-md w-full space-y-8">
       <div>
-        <h2 className="mt-6 text-center text-2xl font-bold text-blue-500">Sign in to your account</h2>
+        <h2 className="text-green-600">Nav. Comming soon</h2>
+        <h2 className="text-green-500">Nav. Comming soon</h2>
+        <div className="">
+          <Login />
+        </div>
       </div>
       <form className="mt-8 space-y-6" action="#" method="POST">
         <input type="hidden" name="remember" defaultValue="true" />
@@ -93,7 +97,6 @@ function App() {
         </div>
       </form>
     </div>
->>>>>>> c782fb1
   </div>
   );
 }
