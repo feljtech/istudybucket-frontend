@@ -1,6 +1,6 @@
 # istudybucket-frontend
 Frontend repository for the iStudyBucket web app
-### Setup
+### Setup - x^x
 
 Simply `fork` this repo to your own repo, by typing out this command on your terminal.
 Now clone the `fork` to your local pc.

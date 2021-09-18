@@ -1,12 +1,16 @@
-import React from 'react';
-import { LockClosedIcon, EyeIcon, EyeOffIcon } from '@heroicons/react/solid'
-
+import React from "react";
+import Login from "./components/login/Login";
+import "./App.css";
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-     <h2 className="mt-6 text-center text-2xl font-bold text-blue-500">iStudyBucket.Go through the readme.md.</h2>
-  </div>
+    <div>
+      <h2 className="text-green-600">Nav. Comming soon</h2>
+      <h2 className="text-green-500">Nav. Comming soon</h2>
+      <div className="">
+        <Login />
+      </div>
+    </div>
   );
 }
 
