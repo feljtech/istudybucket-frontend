@@ -23,10 +23,10 @@ function Signup() {
         </div> */}
         <div className="border shadow rounded p-5 max-w-md w-full space-y-8">
           <div>
-            <h2 className="mt-6 text-center text-2xl font-bold text-blue-500">
+            <h2 className="mt-6 text-center text-2xl font-bold text-green-500">
               Create an account
             </h2>
-            <p className="mt-2 text-center text-xl font-semibold text-yellow-500">
+            <p className="mt-2 text-center text-xl font-semibold text-gray-300">
             Student
           </p>
           </div>
@@ -70,7 +70,7 @@ function Signup() {
                       id="whatsapp"
                       name="whatsapp"
                       type="checkbox"
-                      className="h-4 w-4 text-yellow-500 focus:ring-blue-50 border-gray-300 rounded"
+                      className="h-4 w-4 text-green-500 focus:ring-blue-50 border-gray-300 rounded"
                     />
                     <label
                       htmlFor="whatsapp"
@@ -165,7 +165,7 @@ function Signup() {
                   <label htmlFor="fos" className="block mb-1">
                     Field of study
                   </label>
-                  <select name="fos" id="fos" className="rounded">
+                  <select name="fos" id="fos" className="rounded border-gray-500">
                     <option value="arto">Art: Ordinary Level</option>
                     <option value="arta">Art: Advanced Level</option>
                     <option value="scienceo">Science: Ordinary Level</option>
@@ -259,7 +259,7 @@ function Signup() {
                         id="football"
                         name="football"
                         type="checkbox"
-                        className="h-4 w-4 text-yellow-500 focus:ring-blue-50 border-gray-300 rounded"
+                        className="h-4 w-4 text-green-500 focus:ring-blue-50 border-gray-300 rounded"
                       />
                       <label
                         htmlFor="football"
@@ -273,7 +273,7 @@ function Signup() {
                         id="handball"
                         name="handball"
                         type="checkbox"
-                        className="h-4 w-4 text-yellow-500 focus:ring-blue-50 border-gray-300 rounded"
+                        className="h-4 w-4 text-green-500 focus:ring-blue-50 border-gray-300 rounded"
                       />
                       <label
                         htmlFor="handball"
@@ -287,7 +287,7 @@ function Signup() {
                         id="singing"
                         name="singing"
                         type="checkbox"
-                        className="h-4 w-4 text-yellow-500 focus:ring-blue-50 border-gray-300 rounded"
+                        className="h-4 w-4 text-green-500 focus:ring-blue-50 border-gray-300 rounded"
                       />
                       <label
                         htmlFor="singing"
@@ -301,7 +301,7 @@ function Signup() {
                         id="dancing"
                         name="dancing"
                         type="checkbox"
-                        className="h-4 w-4 text-yellow-500 focus:ring-blue-50 border-gray-300 rounded"
+                        className="h-4 w-4 text-green-500 focus:ring-blue-50 border-gray-300 rounded"
                       />
                       <label
                         htmlFor="dancing"
@@ -318,7 +318,7 @@ function Signup() {
             <div>
               <button
                 type="submit"
-                className=" group font-semibold uppercase relative w-full flex justify-center py-2 px-4 border border-transparent text-sm rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className=" group font-semibold uppercase relative w-full flex justify-center py-2 px-4 border border-transparent text-sm rounded-md text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
               >
                 Register
               </button>
@@ -327,7 +327,7 @@ function Signup() {
                 Or{" "}
                 <a
                   href="#"
-                  className="font-medium text-blue-600 hover:text-blue-500"
+                  className="font-medium text-green-600 hover:text-green-500"
                 >
                   Sign in
                 </a>
@@ -340,10 +340,10 @@ function Signup() {
       <div className="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="border shadow rounded p-5 max-w-md w-full space-y-8">
         <div className="">
-          <h2 className="mt-6 text-center text-2xl font-bold text-blue-500">
+          <h2 className="mt-6 text-center text-2xl font-bold text-green-500">
             Create an account
           </h2>
-          <p className="mt-2 text-center text-xl font-semibold text-yellow-500">
+          <p className="mt-2 text-center text-xl font-semibold text-gray-300">
             Instructor
           </p>
         </div>
@@ -403,7 +403,7 @@ function Signup() {
                     id="whatsapp"
                     name="whatsapp"
                     type="checkbox"
-                    className="h-4 w-4 text-yellow-500 focus:ring-blue-50 border-gray-300 rounded"
+                    className="h-4 w-4 text-green-500 focus:ring-blue-50 border-gray-300 rounded"
                   />
                   <label
                     htmlFor="whatsapp"
@@ -541,7 +541,7 @@ function Signup() {
                       id="football"
                       name="football"
                       type="checkbox"
-                      className="h-4 w-4 text-yellow-500 focus:ring-blue-50 border-gray-300 rounded"
+                      className="h-4 w-4 text-green-500 focus:ring-blue-50 border-gray-300 rounded"
                     />
                     <label
                       htmlFor="football"
@@ -555,7 +555,7 @@ function Signup() {
                       id="handball"
                       name="handball"
                       type="checkbox"
-                      className="h-4 w-4 text-yellow-500 focus:ring-blue-50 border-gray-300 rounded"
+                      className="h-4 w-4 text-green-500 focus:ring-blue-50 border-gray-300 rounded"
                     />
                     <label
                       htmlFor="handball"
@@ -569,7 +569,7 @@ function Signup() {
                       id="singing"
                       name="singing"
                       type="checkbox"
-                      className="h-4 w-4 text-yellow-500 focus:ring-blue-50 border-gray-300 rounded"
+                      className="h-4 w-4 text-green-500 focus:ring-blue-50 border-gray-300 rounded"
                     />
                     <label
                       htmlFor="singing"
@@ -583,7 +583,7 @@ function Signup() {
                       id="dancing"
                       name="dancing"
                       type="checkbox"
-                      className="h-4 w-4 text-yellow-500 focus:ring-blue-50 border-gray-300 rounded"
+                      className="h-4 w-4 text-green-500 focus:ring-blue-50 border-gray-300 rounded"
                     />
                     <label
                       htmlFor="dancing"
@@ -600,7 +600,7 @@ function Signup() {
           <div>
             <button
               type="submit"
-              className=" group font-semibold uppercase relative w-full flex justify-center py-2 px-4 border border-transparent text-sm rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              className=" group font-semibold uppercase relative w-full flex justify-center py-2 px-4 border border-transparent text-sm rounded-md text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
             >
               Register
             </button>
@@ -609,7 +609,7 @@ function Signup() {
               Or{" "}
               <a
                 href="#"
-                className="font-medium text-blue-600 hover:text-blue-500"
+                className="font-medium text-green-600 hover:text-green-500"
               >
                 Sign in
               </a>
