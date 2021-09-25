@@ -1,16 +1,77 @@
-import React from 'react'
-
-const RSideBar = ({...props}) => {
-    return (
-        <div {...props}>
-            <p className="my-3">right</p>
-            <p className="my-3">right</p>
-            <p className="my-3">right</p>
-            <p className="my-3">right</p>
-            <p className="my-3">right</p>
-            <p className="my-3">right</p>
+import React from "react";
+import bulb from "../../assets/img/bulb.jpg";
+const RSideBar = ({ ...props }) => {
+  return (
+    <div {...props}>
+      <div className="my-3">
+        <p className="font-semibold text-xl">Your buckets</p>
+        <div className="flex justify-items-start my-3">
+          <img src={bulb} alt="bulb" className="w-14 h-14 rounded self-center" />
+          <div className="flex flex-col text-left mx-2">
+          <p className="font-semibold text-lg text-gray-600">The Light bulb</p>
+            <span className="hidden">
+    
+              A purposeful area for the formation....
+            </span>
+          </div>
         </div>
-    )
-}
+        <div className="flex justify-items-start my-3">
+          <img src={bulb} alt="bulb" className="w-14 h-14 rounded self-center" />
+          <div className="flex flex-col text-left mx-2">
+          <p className="font-semibold text-lg text-gray-600">The Light bulb</p>
+            <span className="hidden">
+    
+              A purposeful area for the formation....
+            </span>
+          </div>
+        </div>
+        <div className="flex justify-items-start my-3">
+          <img src={bulb} alt="bulb" className="w-14 h-14 rounded self-center" />
+          <div className="flex flex-col text-left mx-2">
+            <p className="font-semibold text-lg text-gray-600">The Light bulb</p>
+            <span className="hidden">
+              A purposeful area for the formation....
+            </span>
+          </div>
+        </div>
+ 
+      </div>
+      <div className="my-3">
+        <p className="font-semibold text-xl">Discover more bucket spaces</p>
+        <div className="flex justify-items-start my-3">
+          <img src={bulb} alt="bulb" className="w-14 h-14 rounded self-center" />
+          <div className="flex flex-col text-left mx-2">
+          <p className="font-semibold text-lg text-gray-600">The Light bulb</p>
+            <span className="hidden">
+    
+              A purposeful area for the formation....
+            </span>
+          </div>
+        </div>
+        <div className="flex justify-items-start my-3">
+          <img src={bulb} alt="bulb" className="w-14 h-14 rounded self-center" />
+          <div className="flex flex-col text-left mx-2">
+          <p className="font-semibold text-lg text-gray-600">The Light bulb</p>
+            <span className="hidden">
+    
+              A purposeful area for the formation....
+            </span>
+          </div>
+        </div>
+        <div className="flex justify-items-start my-3">
+          <img src={bulb} alt="bulb" className="w-14 h-14 rounded self-center" />
+          <div className="flex flex-col text-left mx-2">
+          <p className="font-semibold text-lg text-gray-600">The Light bulb</p>
+            <span className="hidden">
+    
+              A purposeful area for the formation....
+            </span>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  );
+};
 
 export default RSideBar;
