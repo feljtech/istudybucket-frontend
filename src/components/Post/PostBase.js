@@ -1,31 +1,58 @@
-import React, { useContext } from 'react'
-// import {} from '@heroicons/react'
+import React from "react";
+import {
+  ChatIcon,
+  HeartIcon,
+  ShareIcon,
+  ClockIcon,
+} from "@heroicons/react/outline";
+import Searchbar from "../navbar/components/searchbar";
+import me from "../../assets/img/me.jpeg";
 // import { PostContext, PostContextProvider } from '../api/context/PostContext'
 
-const PostBase = ({children, ...props}) => {
-// const {post , setPost} = useContext(PostContext);
+const PostBase = ({ children, ...props }) => {
+  // const {post , setPost} = React.useContext(PostContext);
 
-    return (
-        <div className="rounded w-11/12 border-gray-400 border-2 border-t-0 border-r-0 px-5 py-2" {...props}>
-            <div className="flex justify-between">
-               <div className="block">
-               <p className="mr-2 rounded-full border">Avatar + {"post"}</p>
-                <p className="mr-3 font-bold">iUser.name</p>
-               </div>
-                <p className="text-gray-400 align-left italic self-center">lecturer</p>
-            </div>
-            <div className="border shadow-sm">
-                 {children}
-            </div>
-           
-            <div className="flex">
-                <p className="mr-2">likes</p>
-                <p className="mr-3 font-bold">comment</p>
-                <p className="text-gray-400 ">timestamp</p>
-            </div>
-        </div>            
+  return (
+    <div className="rounded border px-5 py-2" {...props}>
+      <div className="flex justify-between mb-4">
+        <div className="flex">
+          <img src={me} alt="me" className="rounded-full w-12 h-12" />
+          <div className="block mx-2">
+            <p className="mr-3 font-bold">Spyke Lionel</p>
+            <p className="mr-3 text-gray-400 italic">@lionel</p>
+          </div>
+        </div>
+        <p className="text-gray-400 align-left italic self-center">lecturer</p>
+      </div>
+      <div className="border shadow-sm rounded">{children}</div>
 
-    )
-}
+      <div className="flex justify-between">
+        <div className="flex">
+          <HeartIcon className="text-green-600 w-8 fill-current" />
+          <span className="text-green-600 self-center">24</span>
+          <span className="sr-only">likes</span>
+        </div>
+        <div className="flex">
+          <ChatIcon className="w-8 text-green-600" aria-hidden="true" />
+          <span className="text-green-500 self-center">24</span>
+          <span className="sr-only">comments</span>
+        </div>
+        <div className="flex">
+          <ShareIcon className="w-8 text-green-600" />
+          <span className="sr-only">share</span>
+        </div>
+
+        {/* <ClockIcon className="text-green-400 w-8" /> */}
+        <p className="text-gray-400 ">today, 2:52 AM</p>
+      </div>
+
+      <form className="">
+        {/* <input type="text" className="w-full outline-none" /> */}
+        <textarea className="rounded border-green-400 focus:border-green-500" name="" id="" cols="50" rows="3"></textarea>
+        <button className="bg-green-600 text-white">Comment</button>
+      </form>
+    </div>
+  );
+};
 
 export default PostBase;
