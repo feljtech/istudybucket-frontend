@@ -5,7 +5,6 @@ import {
   ShareIcon,
   ClockIcon,
 } from "@heroicons/react/outline";
-import Searchbar from "../navbar/components/searchbar";
 import me from "../../assets/img/me.jpeg";
 // import { PostContext, PostContextProvider } from '../api/context/PostContext'
 
@@ -13,7 +12,7 @@ const PostBase = ({ children, ...props }) => {
   // const {post , setPost} = React.useContext(PostContext);
 
   return (
-    <div className="rounded border px-5 py-2" {...props}>
+    <div className="rounded border px-5 py-2 mt-5" {...props}>
       <div className="flex justify-between mb-4">
         <div className="flex">
           <img src={me} alt="me" className="rounded-full w-12 h-12" />
@@ -43,13 +42,14 @@ const PostBase = ({ children, ...props }) => {
         </div>
 
         {/* <ClockIcon className="text-green-400 w-8" /> */}
-        <p className="text-gray-400 ">today, 2:52 AM</p>
+        <p className="text-gray-400 ">2:52 AM, 2 September 2021</p>
       </div>
 
-      <form className="">
+      <form className="flex align-baseline">
         {/* <input type="text" className="w-full outline-none" /> */}
-        <textarea className="rounded border-green-400 focus:border-green-500" name="" id="" cols="50" rows="3"></textarea>
-        <button className="bg-green-600 text-white">Comment</button>
+        <textarea placeholder="add comment" className="rounded outline-none border-green-400 focus:border-green-500 w-full" name="" id="" cols="50" rows="3"></textarea>
+        {/* <button className="bg-green-600 text-white">Comment</button> */}
+        <ChatIcon className="text-green-400 w-10 relative top-8" /> 
       </form>
     </div>
   );
