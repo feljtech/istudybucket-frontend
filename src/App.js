@@ -13,8 +13,8 @@ function App() {
     <div className="c">
     <Nav className="sticky z-50 top-0 bg-white"/>
     <div className="md:grid lg:grid grid-cols-12 static top-20 bg-blue-50">
-      <LSideBar className="hidden col-span-3 border-r-2 sticky left-0 top-0 text-center lg:flex md:flex flex-col h-screen" />
-      <main className="col-span-6 m-4">
+      <LSideBar className="hidden col-span-3 border-r-2 sticky left-0 top-0 text-center lg:flex flex-col h-screen" />
+      <main className="col-span-6 md:col-span-8 m-4">
         <PostBase>
           <p className="font-semibold font-sans py-4">Amazing Design</p>
         <img src={image}/>
