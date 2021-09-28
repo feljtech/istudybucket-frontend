@@ -45,11 +45,11 @@ const PostBase = ({ children, ...props }) => {
         <p className="text-gray-400 ">2:52 AM, 2 September 2021</p>
       </div>
 
-      <form className="flex align-baseline">
+      <form className="">
         {/* <input type="text" className="w-full outline-none" /> */}
         <textarea placeholder="add comment" className="rounded outline-none border-green-400 focus:border-green-500 w-full" name="" id="" cols="50" rows="3"></textarea>
-        {/* <button className="bg-green-600 text-white">Comment</button> */}
-        <ChatIcon className="text-green-400 w-10 relative top-8" /> 
+        <button className="bg-green-600 text-white px-4 py-3">Comment</button>
+        {/* <ChatIcon className="text-green-400 w-10 relative top-8" />  */}
       </form>
     </div>
   );
