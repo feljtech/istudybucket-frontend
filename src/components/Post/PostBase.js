@@ -6,6 +6,8 @@ import {
   ClockIcon,
 } from "@heroicons/react/outline";
 import me from "../../assets/img/me.jpeg";
+import TextArea from "../../__sub__/TextArea";
+import Button from "../../__sub__/Button";
 // import { PostContext, PostContextProvider } from '../api/context/PostContext'
 
 const PostBase = ({ children, ...props }) => {
@@ -23,9 +25,9 @@ const PostBase = ({ children, ...props }) => {
         </div>
         <p className="text-gray-400 align-left italic self-center">lecturer</p>
       </div>
-      <div className="border shadow-sm rounded">{children}</div>
+      <div className="">{children}</div>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between border-t">
         <div className="flex">
           <HeartIcon className="text-green-600 w-8 fill-current" />
           <span className="text-green-600 self-center">24</span>
@@ -42,14 +44,15 @@ const PostBase = ({ children, ...props }) => {
         </div>
 
         {/* <ClockIcon className="text-green-400 w-8" /> */}
-        <p className="text-gray-400 ">2:52 AM, 2 September 2021</p>
+        <p className="text-gray-400 ">September 2, 2021</p>
       </div>
 
       <form className="">
         {/* <input type="text" className="w-full outline-none" /> */}
-        <textarea placeholder="add comment" className="rounded outline-none border-green-400 focus:border-green-500 w-full" name="" id="" cols="50" rows="3"></textarea>
-        <button className="bg-green-600 text-white px-4 py-3">Comment</button>
-        {/* <ChatIcon className="text-green-400 w-10 relative top-8" />  */}
+        {/* <textarea placeholder="add comment" className="rounded outline-none border-green-400 focus:border-green-500 w-full" name="" id="" cols="50" rows="3"></textarea> */}
+       <TextArea className="w-full"/>
+       
+        <Button name="comment" type="button"/>
       </form>
     </div>
   );
