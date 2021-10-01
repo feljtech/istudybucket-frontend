@@ -1,9 +1,6 @@
 import React from 'react'
 import {
-    ChatIcon,
-    HeartIcon,
-    ShareIcon,
-    ClockIcon,DocumentIcon, BanIcon
+    DocumentIcon, BanIcon,
   } from "@heroicons/react/outline";
 
 const LSideBar = ({...props}) => {
