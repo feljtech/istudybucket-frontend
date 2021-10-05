@@ -1,7 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap');
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Noto Sans Display', sans-serif;
+}
+
+h1 {
+  font-weight: 500 !important;
+}
+
+p {
+  font-weight: 400 !important;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px ;
 }
