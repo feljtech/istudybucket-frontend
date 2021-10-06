@@ -5,15 +5,16 @@ import {
   ShareIcon,
   ClockIcon,
 } from "@heroicons/react/outline";
-import Searchbar from "../navbar/components/searchbar";
 import me from "../../assets/img/me.jpeg";
+import TextArea from "../../__sub__/TextArea";
+import Button from "../../__sub__/Button";
 // import { PostContext, PostContextProvider } from '../api/context/PostContext'
 
 const PostBase = ({ children, ...props }) => {
   // const {post , setPost} = React.useContext(PostContext);
 
   return (
-    <div className="rounded border px-5 py-2" {...props}>
+    <div className="rounded border px-5 py-2 mt-5" {...props}>
       <div className="flex justify-between mb-4">
         <div className="flex">
           <img src={me} alt="me" className="rounded-full w-12 h-12" />
@@ -24,9 +25,9 @@ const PostBase = ({ children, ...props }) => {
         </div>
         <p className="text-gray-400 align-left italic self-center">lecturer</p>
       </div>
-      <div className="border shadow-sm rounded">{children}</div>
+      <div className="">{children}</div>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between border-t">
         <div className="flex">
           <HeartIcon className="text-green-600 w-8 fill-current" />
           <span className="text-green-600 self-center">24</span>
@@ -43,13 +44,15 @@ const PostBase = ({ children, ...props }) => {
         </div>
 
         {/* <ClockIcon className="text-green-400 w-8" /> */}
-        <p className="text-gray-400 ">today, 2:52 AM</p>
+        <p className="text-gray-400 ">September 2, 2021</p>
       </div>
 
       <form className="">
         {/* <input type="text" className="w-full outline-none" /> */}
-        <textarea className="rounded border-green-400 focus:border-green-500" name="" id="" cols="50" rows="3"></textarea>
-        <button className="bg-green-600 text-white">Comment</button>
+        {/* <textarea placeholder="add comment" className="rounded outline-none border-green-400 focus:border-green-500 w-full" name="" id="" cols="50" rows="3"></textarea> */}
+       <TextArea className="w-full"/>
+       
+        <Button name="comment" type="button"/>
       </form>
     </div>
   );

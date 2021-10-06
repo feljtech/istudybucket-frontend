@@ -19,7 +19,7 @@ function classNames(...classes) {
 
 export default function Nav({...props}) {
   return (
-    <Popover className="relative bg-white" {...props}>
+    <Popover className="relative bg-white w-full" {...props}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-3 md:justify-start md:space-x-2">
           <div className="flex justify-start items-center lg:w-0 lg:flex-1">
