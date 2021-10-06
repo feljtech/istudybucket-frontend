@@ -231,7 +231,7 @@ export default function Nav({...props}) {
             <UserCircleIcon className="text-green-400 w-8" />
             <a
               href="#"
-              className="ml-2 whitespace-nowrap px-4 py-2 border border-transparent rounded-md text-base font-medium text-green-300 hover:text-green-400"
+              className="hidden ml-2 whitespace-nowrap px-4 py-2 border border-transparent rounded-md text-base font-medium text-green-300 hover:text-green-400"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -248,6 +248,7 @@ export default function Nav({...props}) {
                 />
               </svg>
             </a>
+          
           </div>
         </div>
       </div>

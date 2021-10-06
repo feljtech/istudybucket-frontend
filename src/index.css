@@ -16,3 +16,7 @@ p {
   font-size: 16px;
   line-height: 24px ;
 }
+.green-handle::-webkit-slider-thumb {
+  background: green;
+}
+
