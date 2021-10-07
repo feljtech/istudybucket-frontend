@@ -8,7 +8,7 @@ import RSideBar from "./components/rsidebar";
 
 import image from './assets/img/img1.jpg'
 import Profile from "./pages/bucket/Profile";
-import img from './assets/img/img1.jpg'
+import Login from "./components/login/Login";
 
 function App() {
   return (
@@ -37,7 +37,7 @@ function App() {
       {/* <LSideBar className="hidden col-span-3 border-r-2 sticky left-0 top-0 text-center lg:flex flex-col h-screen" /> */}
       <RSideBar className="hidden green-handle overflow-y-auto m-3 p-3 rounded-md bg-white col-span-4 lg:col-span-3 border border-3 sticky right-0 top-0 text-center md:flex flex-col h-screen" />
     </div>
-    </div>
+
   );
 }
 
