@@ -6,7 +6,7 @@ import Card from "../../__sub__/Card";
 const Profile = ({ name, img, description, ...props }) => {
     const [showModal, setShowModal] = React.useState(true)
   return showModal && (
-      <div className={showModal && "fixed top-5 left-0 w-full h-screen flex justify-center items-center backdrop-filter backdrop-blur backdrop-brightness-50 z-40" || ""}
+      <div className={showModal && "fixed top-5 left-0 w-full h-screen flex justify-center items-center bg-gray-500 bg-opacity-5 z-40" || ""}
       >
           <div
 				id="overlay"
