@@ -18,22 +18,22 @@ const PostBase = ({ children, ...props }) => {
     <div className="rounded border px-5 py-2 mt-5" {...props}>
       <div className="flex justify-between mb-4">
         <div className="flex ">
-        <UserCircleIcon className="text-green-400 w-8" />
+        <UserCircleIcon className="text-gray-400 w-12" />
           <div className="block mx-2 self-center">
-            <p className="hidden mr-3 font-bold">Spyke Lionel</p>
-            <p className="mr-3 text-gray-500 self-center">@lionel</p>
+            <p className="mr-3 font-bold">NDI Lionel</p>
+            <p className="mr-3 text-green-500 self-center cursor-pointer">@lionel</p>
           </div>
         </div>
-        <p className="text-gray-400 ">September 2, 2021</p>
+        <p className="text-gray-400 self-center">September 2, 2021</p>
         <p className="hidden text-gray-400 align-left italic self-center">lecturer</p>
       </div>
       <div className="">{children}</div>
 
-      <div className="flex justify-between border-t pt-2">
+      <div className="flex justify-around border-t pt-2">
         <div className="flex justify-between">
-          <div className="flex border border-green-300 rounded-full mr-2 p-1 cursor-pointer hover:bg-green-500 ">
-            <span className="text-green-600 hover:text-white text-sm self-center">24</span>
-            <ArrowUpIcon className="text-green-600 hover:text-white w-6 " />
+          <div className="flex border border-gray-300 rounded-full mr-2 p-1 cursor-pointer hover:bg-green-500 ">
+            <span className="text-gray-600 hover:text-white text-sm self-center">24</span>
+            <ArrowUpIcon className="text-gray-600 hover:text-white w-6 " />
             <span className="sr-only">upvotes</span>
           </div>
           <div className="flex border border-green-300 rounded-full mr-2 p-1 cursor-pointer hover:bg-green-500 ">
