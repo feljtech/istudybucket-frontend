@@ -16,7 +16,16 @@ p {
   font-size: 16px;
   line-height: 24px ;
 }
-.green-handle::-webkit-slider-thumb {
-  background: green;
-}
 
+.green-handle::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+.green-handle::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.green-handle::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}

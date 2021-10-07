@@ -6,7 +6,7 @@ import Card from "../../__sub__/Card";
 const Profile = ({ name, img, description, ...props }) => {
     const [showModal, setShowModal] = React.useState(true)
   return showModal && (
-      <div className={showModal && "fixed top-5 left-0 w-full h-screen flex justify-center items-center backdrop-filter backdrop-blur backdrop-brightness-50 z-40" || ""}
+      <div className={showModal && "fixed top-5 left-0 w-full h-screen flex justify-center items-center bg-gray-500 bg-opacity-90 z-40" || ""}
       >
           <div
 				id="overlay"
@@ -23,7 +23,7 @@ const Profile = ({ name, img, description, ...props }) => {
           </div>
           <h1 className="font-bold self-center ml-3">{name}</h1>
           <Button name="Request to join" type="button" />
-          <p className="text-gray-500 select-all">{description}</p>
+          <p className="text-gray-500 pt-2">{description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, doloribus deleniti incidunt autem excepturi nesciunt nobis perspiciatis totam dignissimos quae sequi laboriosam soluta, perferendis explicabo vero saepe? Quibusdam, exercitationem veniam?</p>
         </Card>
   
       </div>
