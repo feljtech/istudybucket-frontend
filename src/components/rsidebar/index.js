@@ -1,3 +1,8 @@
+/*
+  * Should be dynamic based on userInfo passed via userContext
+
+*/
+
 import React from "react";
 import bulb from "../../assets/img/bulb.jpg";
 import Card from "../../__sub__/Card";
