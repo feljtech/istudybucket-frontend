@@ -13,6 +13,7 @@ import Post from "./components/Post/Post";
 
 function App() {
   return (
+
     <Page>
       <Nav className="sticky z-50 top-0 bg-white shadow-sm" />
       <Main>
