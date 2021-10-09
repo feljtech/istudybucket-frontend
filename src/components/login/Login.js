@@ -52,10 +52,8 @@ function Login() {
             }}
             validationSchema={Yup.object({
               username: Yup.string()
-                .max(20, "Must be 20 characters or less")
                 .required("Required"),
               password: Yup.string()
-                .min(8, "Must be 8 characters or more")
                 .required("Required"),
               rememberMe: Yup.boolean()
                 .required("Required")
@@ -169,13 +167,13 @@ function Login() {
                   <p className={" text-center mb-2"}>OR continue with</p>
                   <div className="flex justify-center mt-2">
                     <div className="border prima py-2 px-6 mx-3 cursor-pointer hover:bg-gray-100 rounded-2xl">
-                      <FaFacebook />
+                      <FaFacebook className="text-blue-700"/>
                     </div>
                     <div className="border py-2 px-6 mx-3 cursor-pointer hover:bg-gray-100 rounded-2xl">
                       <FaGithub />
                     </div>
                     <div className="border py-2 px-6 mx-3 cursor-pointer hover:bg-gray-100 rounded-2xl">
-                      <FaGoogle />
+                      <FaGoogle className="text-red-700"/>
                     </div>
                   </div>
                 </div>
