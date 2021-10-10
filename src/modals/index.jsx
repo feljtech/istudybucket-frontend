@@ -1,5 +1,5 @@
 import React, { useContext, cloneElement } from 'react'
-import { ModalContext } from '../components/api/context/ModalContext'
+import { ModalContext } from '../api/context/ModalContext'
 
 const ModalBase = ({ children, title }) => {
 	const { modalData, setModalData } = useContext(ModalContext)
