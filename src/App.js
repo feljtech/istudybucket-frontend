@@ -37,10 +37,20 @@ function App() {
         <Route exact path="/profile/user/:username">
           <div>user Profile</div>
         </Route>
+        <Route exact path="/timeline/user/:username">
+          <div>all current user post. will be deprecated in v1.1 . will be moved to /profile/user/:username to get all user posts</div>
+          Same for /timeline/bucket/:bucketname
+        </Route>
+         <Route exact path="/post/create">
+          <div>create a post</div>
+        </Route>
+        <Route exact path="/post/:postId">
+          <div>view a post by id</div>
+        </Route>
         <Route exact path="/bucket/create">
           <div>create a bucket</div>
         </Route>
-        <Route exact path="/profile/bucket/:bucket">
+        <Route exact path="/profile/bucket/:bucketname">
           <div>bucket Profile</div>
         </Route>
         <Route path="">
