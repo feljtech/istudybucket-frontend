@@ -1,24 +1,24 @@
 /* This example requires Tailwind CSS v2.0+ */
 import React, { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon,  } from "@heroicons/react/outline";
+import { BookOpenIcon, UserCircleIcon } from "@heroicons/react/solid";
 import {
-  BookOpenIcon,
   InboxIcon,
   HomeIcon,
   BellIcon,
-  UserCircleIcon,
   ChatIcon,
   CheckIcon,
-  UserGroupIcon
-} from "@heroicons/react/solid";
+  UserGroupIcon,
+  MenuIcon,
+  XIcon,
+} from "@heroicons/react/outline";
 import Searchbar from "./components/searchbar";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Nav({...props}) {
+export default function Nav({ ...props }) {
   return (
     <Popover className="relative bg-white w-full" {...props}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -45,7 +45,7 @@ export default function Nav({...props}) {
             <Popover className="relative">
               <Searchbar />
             </Popover>
-            <HomeIcon className="text-green-400 w-8 cursor-pointer" />
+            <HomeIcon className="text-gray-700 w-8 cursor-pointer" />
 
             <Popover className="relative">
               {({ open }) => (
@@ -57,7 +57,7 @@ export default function Nav({...props}) {
                     )}
                   >
                     <div className="relative m-0 top-3.5">
-                      <BellIcon className="text-green-400 w-8" />
+                      <BellIcon className="text-gray-700 w-8" />
                       <p className="absolute top-1 right-2 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full"></p>
                     </div>
                   </Popover.Button>
@@ -158,7 +158,7 @@ export default function Nav({...props}) {
                     )}
                   >
                     <div className="relative m-0 top-3.5">
-                      <UserGroupIcon className="text-green-400 w-8" />
+                      <UserGroupIcon className="text-gray-700 w-8" />
                       <p className="absolute top-1 right-1 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full"></p>
                     </div>
                   </Popover.Button>
@@ -174,16 +174,22 @@ export default function Nav({...props}) {
                   >
                     <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-72 max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                       <div className="rounded-lg shadow-lg ring-1 bg-white ring-opacity-5 overflow-auto">
-                        <p className="text-gray-600 p-3 cu">Buckets you follow</p>
-                       <div className="flex justify-between p-3 mt-2 border-t-2 cursor-pointer">
-                         <h1 className="text-gray-700 font-bold">Bxr-native</h1>
-                         <p className="text-gray-500 italic">42 new post</p>
-                       </div>
-                       <div className="flex justify-between p-3 mt-3 border-t-2 cursor-pointer">
-                         <h1 className="text-gray-700 font-bold">Bxr-native</h1>
-                         <p className="text-gray-500 italic">7 new post</p>
-                       </div>
-                       </div>
+                        <p className="text-gray-600 p-3 cu">
+                          Buckets you follow
+                        </p>
+                        <div className="flex justify-between p-3 mt-2 border-t-2 cursor-pointer">
+                          <h1 className="text-gray-700 font-bold">
+                            Bxr-native
+                          </h1>
+                          <p className="text-gray-500 italic">42 new post</p>
+                        </div>
+                        <div className="flex justify-between p-3 mt-3 border-t-2 cursor-pointer">
+                          <h1 className="text-gray-700 font-bold">
+                            Bxr-native
+                          </h1>
+                          <p className="text-gray-500 italic">7 new post</p>
+                        </div>
+                      </div>
                     </Popover.Panel>
                   </Transition>
                 </>
@@ -193,7 +199,7 @@ export default function Nav({...props}) {
 
           {/* user-section */}
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <UserCircleIcon className="text-green-400 w-8" />
+            <UserCircleIcon className="text-gray-700 w-8" />
             <a
               href="#"
               className="hidden ml-2 whitespace-nowrap px-4 py-2 border border-transparent rounded-md text-base font-medium text-green-300 hover:text-green-400"
@@ -213,7 +219,6 @@ export default function Nav({...props}) {
                 />
               </svg>
             </a>
-          
           </div>
         </div>
       </div>

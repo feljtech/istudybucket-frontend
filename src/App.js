@@ -1,7 +1,7 @@
 import React from "react";
 // import Signup from "./components/signup/Signup";
 import "./App.css";
-import LSideBar from "./components/lsidebar";
+import LSideBar from "./components/lsidebar/index";
 import Nav from "./components/navbar/Navi";
 import PostBase from "./components/Post/PostBase";
 import RSideBar from "./components/rsidebar";
@@ -12,14 +12,16 @@ import Login from "./components/login/Login";
 import Signup from "./components/signup/Signup";
 import Post from "./components/Post/Post";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import BroadView from "./pages/bucket";
 
 function App() {
   return (
     <Router>
+      <Nav className="sticky z-50 top-0 bg-white shadow-sm" />
       <Switch>
         <Route exact path="/">
           <Page>
-            <Nav className="sticky z-50 top-0 bg-white shadow-sm" />
+            
             <Main>
               <LSideBar className="hidden px-2 bg-white col-span-1 border-r-2 sticky left-0 top-0 text-center lg:flex flex-col h-screen" />
               <Feed />
@@ -47,11 +49,14 @@ function App() {
         <Route exact path="/post/:postId">
           <div>view a post by id</div>
         </Route>
+        <Route exact path="/bucket">
+          <div>your Buckets</div>
+        </Route>
         <Route exact path="/bucket/create">
           <div>create a bucket</div>
         </Route>
         <Route exact path="/profile/bucket/:bucketname">
-          <div>bucket Profile</div>
+          <BroadView />
         </Route>
         <Route path="">
           <div>404. Page not found. return <Link to="/" className="text-green-400">Home</Link></div>
