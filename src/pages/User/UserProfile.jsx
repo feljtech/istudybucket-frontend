@@ -73,7 +73,7 @@ const BroadView = () => {
             <p className="text-gray-700 font-bold mx-2 border-b-2 border-green-600">
             Subscribers
             </p>
-            <p className="text-gray-700 font-bold mx-2">Scubscrition</p>
+            <p className="text-gray-700 font-bold mx-2">Subscribtion</p>
           </div>
           </div>
         </Route>
