@@ -7,21 +7,24 @@ import PostBase from "./components/Post/PostBase";
 import RSideBar from "./components/rsidebar";
 
 import image from "./assets/img/img1.jpg";
-import Profile from "./pages/bucket/Profile";
+import Profile from "./pages/User/Profile";
 import Login from "./components/login/Login";
 import Signup from "./components/signup/Signup";
 import Post from "./components/Post/Post";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router,useRouteMatch, Switch, Route, Link } from "react-router-dom";
 import BroadView from "./pages/bucket";
 
 function App() {
+  // const location = useLocation();
+  // const { path,  } = useRouteMatch();
   return (
     <Router>
+      {/* {!(path==="/login" || path==="/register") &&
+      } */}
       <Nav className="sticky z-50 top-0 bg-white shadow-sm" />
       <Switch>
         <Route exact path="/">
           <Page>
-            
             <Main>
               <LSideBar className="hidden px-2 bg-white col-span-1 border-r-2 sticky left-0 top-0 text-center lg:flex flex-col h-screen" />
               <Feed />
@@ -37,11 +40,7 @@ function App() {
           <Signup />
         </Route>
         <Route exact path="/profile/user/:username">
-          <div>user Profile</div>
-        </Route>
-        <Route exact path="/timeline/user/:username">
-          <div>all current user post. will be deprecated in v1.1 . will be moved to /profile/user/:username to get all user posts</div>
-          Same for /timeline/bucket/:bucketname
+          <Profile />
         </Route>
          <Route exact path="/post/create">
           <div>create a post</div>
@@ -58,7 +57,7 @@ function App() {
         <Route exact path="/profile/bucket/:bucketname">
           <BroadView />
         </Route>
-        <Route path="">
+        <Route path="*">
           <div>404. Page not found. return <Link to="/" className="text-green-400">Home</Link></div>
         </Route>
       </Switch>
