@@ -2,6 +2,7 @@ import React from "react";
 import ModalBase from "../../modals";
 import Button from "../../__sub__/Button";
 import Card from "../../__sub__/Card";
+import img from "../../assets/img/bulb.jpg";
 
 const Profile = ({ name, img, description, ...props }) => {
     const [showModal, setShowModal] = React.useState(true)
@@ -18,9 +19,9 @@ const Profile = ({ name, img, description, ...props }) => {
           {...props}
         >
           <div className="w-full h-10 bg-green-400 rounded-t-md"></div>
-          <div className="flex my-3 flex-row justify-center">
+          {/* <div className="flex my-3 flex-row justify-center">
             <img className="rounded-full h-40 w-40" src={img} alt={img.slice(14)} />
-          </div>
+          </div> */}
           <h1 className="font-bold self-center ml-3">{name}</h1>
           <Button name="Request to join" type="button" />
           <p className="text-gray-500 pt-2">{description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, doloribus deleniti incidunt autem excepturi nesciunt nobis perspiciatis totam dignissimos quae sequi laboriosam soluta, perferendis explicabo vero saepe? Quibusdam, exercitationem veniam?</p>
