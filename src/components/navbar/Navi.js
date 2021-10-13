@@ -58,7 +58,7 @@ export default function Nav({ ...props }) {
                   >
                     <div className="relative m-0 top-3.5">
                       <BellIcon className="text-gray-700 w-8" />
-                      <p className="absolute top-1 right-2 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full"></p>
+                      <p className="absolute top-1 right-2 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 bg-green-600 rounded-full"></p>
                     </div>
                   </Popover.Button>
 
@@ -159,7 +159,7 @@ export default function Nav({ ...props }) {
                   >
                     <div className="relative m-0 top-3.5">
                       <UserGroupIcon className="text-gray-700 w-8" />
-                      <p className="absolute top-1 right-1 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full"></p>
+                      <p className="absolute top-1 right-1 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 bg-green-600 rounded-full"></p>
                     </div>
                   </Popover.Button>
 
@@ -274,7 +274,7 @@ export default function Nav({ ...props }) {
                           >
                             <div className="relative m-0 top-3.5">
                               <BellIcon className="text-green-400 w-8" />
-                              <p className="absolute top-1 right-2 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full"></p>
+                              <p className="absolute top-1 right-2 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 bg-green-500 rounded-full"></p>
                             </div>
                           </Popover.Button>
 
@@ -376,7 +376,7 @@ export default function Nav({ ...props }) {
                           >
                             <div className="relative m-0 top-3.5">
                               <InboxIcon className="text-green-400 w-8" />
-                              <p className="absolute top-1 right-2 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full"></p>
+                              <p className="absolute top-1 right-2 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 bg-green-500 rounded-full"></p>
                             </div>
                           </Popover.Button>
 
