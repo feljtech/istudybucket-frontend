@@ -1,13 +1,7 @@
 import React from "react";
 import { Tab } from '@headlessui/react'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link, useLocation,
-  useRouteMatch,
-  useParams,
-} from "react-router-dom";
+import {Link} from "react-router-dom";
+import { PhoneIcon, PencilIcon } from "@heroicons/react/outline";
 import image from "../../assets/img/bulb.jpg";
 import Post from "../../components/Post/Post";
 import Button from "../../__sub__/Button";
@@ -36,98 +30,84 @@ const Profile = () => {
         " Ut accusamus praesentium eveniet vel odio numquam voluptates, vero animi.",
     },
   ];
-  const location = useLocation();
-  const { path, url } = useRouteMatch();
-const {param} = useParams()
   return (
     <div>
       <div className="w-full relative">
-        <div className="w-full h-56 bg-green-100" />
-        <div className="absolute bg-opacity-10 top-5">
-          <div className="sticky top-10 border-3 border-gray-800 z-20">
-            <div className="flex relative mx-16 ">
+        <div className="mb-2" >
+           <p className="font-bold text-lg p-4">User Profile</p>
+        </div>
+          <div className="border-3 mx-10 border-gray-800 block sm:flex justify-evenly">
+            <div className="flex relative ">
               <img
                 src={image}
                 alt=""
                 className="w-40 h-40 rounded-full border border-green-600"
               />
+              <div className="">
               <div className="self-center mx-3">
-                <p className="block font-bold">The Light bulb for {param}</p>
-                <p>
+                <p className="block font-bold">NDI LIONEL</p>
+
+                <div className="my-2">
+                  <p className="text-sm text-gray-800 ">Bio</p>
+                <p className="text-sm text-gray-500">
                   Purpose for the formation and lorem ipsum dorime catum ilusem
                   deli arder
                 </p>
-                <div className="py-2">
-                  <Button name="Request to join" />
+                </div>
+                <div className="border border-gray-400 rounded-md bg-gray-100 hover:bg-gray-300 flex py-3 w-max cursor-pointer">
+                  <PencilIcon className="w-5 text-gray-800 hover:text-gray-900"/>
+                  <p className="self-center text-gray-700 hover:text-gray-800 px-2">Edit Profile</p>
                 </div>
               </div>
+            
+              </div>
+           
             </div>
+            <div className="border green-handle overflow-auto h-40 w-max mt-5 sm:mt-0 p-3 pt-0 rounded-lg sm:self-center shadow-md">
+                <p className="font-bold text-md text-center">Student Info</p>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">Username: </p>
+                  <p className="text-gray-700 self-center">@lionel </p>
+                </div>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">School: </p>
+                  <p className="text-gray-700 self-center">Uniba </p>
+                </div>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">Location: </p>
+                  <p className="text-gray-700 self-center">Space </p>
+                </div>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">Contact: </p>
+                  <div className="flex">
+                  <p className="text-gray-700 self-center">+237679561046 </p>
+                  <PhoneIcon className="w-5 cursor-pointer text-gray-800 hover:text-gray-900"/>
+                  </div>
+                </div>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">Field of study: </p>
+                  <p className="text-gray-700 self-center">CSE </p>
+                </div>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">Facebook: </p>
+                  <Link className="text-gray-700 self-center">null </Link>
+                </div>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">Twitter: </p>
+                  <Link className="text-gray-700 self-center italic">spyke_lionel </Link>
+                </div>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">Github: </p>
+                  <Link className="text-gray-700 self-center italic">spykelion </Link>
+                </div>
+              </div>
           </div>
-        </div>
-        <Example />
-        <div className="mx-10 py-5">
-          <div className="my-1">
-            <div className="bg-blue-50 flex">
-              <Link
-                to={`${url}/posts`}
-                className="text-gray-700 font-medium mx-2 border-b-2 border-green-600"
-              >
-                Posts <span className="text-gray-500 text-xs px-2">24</span>
-              </Link>
-              <Link
-                to={`${url}/followers`}
-                className="text-gray-700 font-bold mx-2"
-              >
-                Followers
-                <span className="text-gray-500 text-xs px-2">24</span>
-              </Link>
-              <Link
-                to={`${url}/following`}
-                className="text-gray-700 font-bold mx-2"
-              >
-                Following
-                <span className="text-gray-500 text-xs px-2">24</span>
-              </Link>
-              <Link
-                to={`${path}/post/e23`}
-                className="text-gray-700 font-bold mx-2"
-              >
-                postid
-                <span className="text-gray-500 text-xs px-2">24</span>
-              </Link>
-            </div>
-          </div>
-        </div>
+<div className="bg-gray-100 w-full h-1 my-2"/>
+        <p className="text-center text-xl text-green-500">Edit profile</p>
       </div>
-      <Switch>
-        <Route exact path={`${path}/posts`}>
-          <div className="m-5 flex">
-           <div className="p-2">
-           <Post posts={posts} />
-           </div>
-           <div className="hidden green-handle h-screen overflow-y-auto w-1/2 md:block p-2 border border-gray-300">Some side nav</div>
-          </div>
-        </Route>
-        <Route exact path={`${path}/followers`}>
-          <h3>All users followers.</h3>
-        </Route>
-        <Route exact path={`${path}/following`}>
-          <h3>All user followings.</h3>
-        </Route>
-        <Route path={`${path}/post/:postId`}>
-          <PostID />
-        </Route>
-      </Switch>
     </div>
   );
 };
-
-const PostID = () =>{
-  let { postId } = useParams();
-  return (
-    <p>Some post {postId}</p>
-  )
-}
 
 
 function classNames(...classes) {
@@ -189,10 +169,10 @@ export function Example() {
   const [at, setAt] = React.useState('')
   const handleTabChange= (index) => {
     console.log('Changed selected tab to:', index)
-    setAt(Object.keys(categories).at(index))
+    setAt(Object.keys(categories)?.at(index))
   }
   return (
-    <div className="w-full max-w-md px-2 py-16 sm:px-0">
+    <div className="w-full max-w-md px-2 py-5 sm:px-0">
       <Tab.Group
        onChange={handleTabChange}
       >

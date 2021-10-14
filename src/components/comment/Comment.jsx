@@ -1,5 +1,4 @@
 import React from "react";
-import { ChatIcon } from "@heroicons/react/outline";
 import {
   ArrowDownIcon,
   ArrowUpIcon,
