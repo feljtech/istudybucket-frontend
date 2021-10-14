@@ -109,6 +109,62 @@ const Profile = () => {
   );
 };
 
+export const ProfileEdit = ({hideEdit,...props}) =>{
+  return (
+    <div  {...props}>
+      <div
+				id="overlay"
+				onClick={hideEdit}
+				className="absolute h-screen w-full -z-10"
+			/>
+      <form action="" className="border relative shadow-lg p-5 w-max z-50">
+        <XIcon onClick={hideEdit} className="cursor-pointer p-1 border rounded-full border-red-600 bg-white w-7 text-red-500 absolute top-0 right-0"/>
+        <div className="my-2 mx-3">
+          <label htmlFor="sname">Name: </label>
+          <input className="rounded" type="text" name="sname" />
+        </div>
+        <div className="my-2 mx-3">
+          <label htmlFor="school">School: </label>
+          <input className="school" type="text" name="sname" />
+        </div>
+        <div className="my-2 mx-3">
+          <label htmlFor="sname">Location: </label>
+          <input className="rounded" type="text" name="location" />
+        </div>
+        <div className="my-2 mx-3">
+          <label htmlFor="contact">Contact: </label>
+          <input className="rounded" type="text" name="contact" />
+         <div className=" text-center">
+         <label htmlFor="whatsapp" className="text-sm mr-2">Has got whatsapp?</label>
+          <input name="whatsapp" type="checkbox" className="self-center rounded-md ring-0 focus:ring-0 text-green-400" />
+         </div>
+         </div>
+         <div className="my-2 mx-3">
+          <label htmlFor="fos">Field of Study: </label>
+          <select name="fos" id="">
+            <option value="cse">CSE</option>
+            <option value="ce">CE</option>
+            <option value="fs">FS</option>
+          </select>
+        </div>
+        <div className="my-2 mx-3">
+          <label htmlFor="fb">Facebook username: </label>
+          <input className="rounded" type="text" name="fb" />
+        </div>
+        <div className="my-2 mx-3">
+          <label htmlFor="tw">Twitter username: </label>
+          <input className="rounded" type="text" name="tw" />
+        </div>
+        <div className="my-2 mx-3">
+          <label htmlFor="gh">Github username: </label>
+          <input className="rounded" type="text" name="gh" />
+        </div>
+        <Button name="Update Profile" type="submit"/>
+      </form>
+    </div>
+  )
+}
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
