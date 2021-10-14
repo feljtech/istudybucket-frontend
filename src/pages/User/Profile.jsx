@@ -1,7 +1,7 @@
 import React from "react";
 import { Tab } from '@headlessui/react'
 import {Link} from "react-router-dom";
-import { PhoneIcon, PencilIcon } from "@heroicons/react/outline";
+import { PhoneIcon, PencilIcon, XIcon } from "@heroicons/react/outline";
 import image from "../../assets/img/bulb.jpg";
 import Post from "../../components/Post/Post";
 import Button from "../../__sub__/Button";
@@ -30,8 +30,14 @@ const Profile = () => {
         " Ut accusamus praesentium eveniet vel odio numquam voluptates, vero animi.",
     },
   ];
+  const [editProfile, setEditProfile] = React.useState(false)
   return (
     <div>
+      {
+        editProfile && (
+          <ProfileEdit hideEdit={()=>setEditProfile(false)} className="fixed top-10 left-0 w-full h-screen flex justify-center items-center backdrop-filter backdrop-blur backdrop-contrast-50 z-40" />
+        )
+      }
       <div className="w-full relative">
         <div className="mb-2" >
            <p className="font-bold text-lg p-4">User Profile</p>
@@ -54,7 +60,7 @@ const Profile = () => {
                   deli arder
                 </p>
                 </div>
-                <div className="border border-gray-400 rounded-md bg-gray-100 hover:bg-gray-300 flex py-3 w-max cursor-pointer">
+                <div onClick={()=>setEditProfile(true)} className="border border-gray-400 rounded-md bg-gray-100 hover:bg-gray-300 flex py-3 w-max cursor-pointer">
                   <PencilIcon className="w-5 text-gray-800 hover:text-gray-900"/>
                   <p className="self-center text-gray-700 hover:text-gray-800 px-2">Edit Profile</p>
                 </div>
@@ -94,16 +100,17 @@ const Profile = () => {
                 </div>
                 <div className="flex justify-between mr-3">
                   <p className="py-2 pr-4">Twitter: </p>
-                  <Link className="text-gray-700 self-center italic">spyke_lionel </Link>
+                  <Link className="text-gray-700 self-center italic">@spyke_lionel </Link>
                 </div>
                 <div className="flex justify-between mr-3">
                   <p className="py-2 pr-4">Github: </p>
-                  <Link className="text-gray-700 self-center italic">spykelion </Link>
+                  <Link className="text-gray-700 self-center italic">@spykelion </Link>
                 </div>
               </div>
           </div>
-<div className="bg-gray-100 w-full h-1 my-2"/>
-        <p className="text-center text-xl text-green-500">Edit profile</p>
+<div className="bg-gray-200 shadow-lg w-full h-1 my-2"/>
+
+        <Activity />
       </div>
     </div>
   );
@@ -170,9 +177,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export function Example() {
+export function Activity() {
   let [categories] = React.useState({
-    Recent: [
+    Posts: [
       {
         id: 1,
         title: 'Does drinking coffee make you smarter?',
@@ -188,8 +195,29 @@ export function Example() {
         commentCount: 3,
         shareCount: 2,
       },
+      {
+        id: 3,
+        title: "So you've bought coffee... now what?",
+        date: '2h ago',
+        commentCount: 3,
+        shareCount: 2,
+      },
+      {
+        id: 4,
+        title: "So you've bought coffee... now what?",
+        date: '2h ago',
+        commentCount: 3,
+        shareCount: 2,
+      },
+      {
+        id: 5,
+        title: "So you've bought coffee... now what?",
+        date: '2h ago',
+        commentCount: 3,
+        shareCount: 2,
+      },
     ],
-    Popular: [
+    Buckets: [
       {
         id: 1,
         title: 'Is tech making coffee better or worse?',
@@ -205,7 +233,7 @@ export function Example() {
         shareCount: 12,
       },
     ],
-    Trending: [
+    Others: [
       {
         id: 1,
         title: 'Ask Me Anything: 10 answers to your questions about coffee',
@@ -222,7 +250,7 @@ export function Example() {
       },
     ],
   })
-  const [at, setAt] = React.useState('')
+  const [at, setAt] = React.useState('Posts')
   const handleTabChange= (index) => {
     console.log('Changed selected tab to:', index)
     setAt(Object.keys(categories)?.at(index))
@@ -232,18 +260,18 @@ export function Example() {
       <Tab.Group
        onChange={handleTabChange}
       >
-        <div className="text-red-400 p-4">{at}</div>
+        <div className=""><p className="p-5 m-3 font-bold">User Activity: {at}</p> </div>
         <Tab.List className="flex p-1 space-x-1 bg-blue-900/20 rounded-xl">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
               className={({ selected }) =>
                 classNames(
-                  'w-full py-2.5 text-sm leading-5 font-medium text-blue-700 rounded-lg',
-                  'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60',
+                  'w-full py-2.5 text-sm leading-5 font-bold hover:text-green-700 text-gray-800 rounded-lg',
+                  'focus:outline-none',
                   selected
-                    ? 'bg-white shadow'
-                    : 'text-blue-100 hover:bg-white/[0.12] hover:text-green-400'
+                    ? 'bg-white shadow border-b-2 border-green-900'
+                    : 'text-gray-600 hover:bg-white/[0.12] '
                 )
               }
             >
