@@ -111,7 +111,7 @@ const PostBase = ({ children, ...props }) => {
 
 export const CommentForm = ({ ...props }) => {
   return (
-    <div className="border-b mb-2" {...props}>
+    <div className="border-b my-2" {...props}>
       <TextArea className="w-full" />
       <Button name="comment" type="button" />
     </div>
