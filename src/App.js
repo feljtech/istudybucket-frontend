@@ -97,7 +97,7 @@ export const Feed = ({ ...props }) => {
     <div className="bg-white col-span-6 md:col-span-8 m-4" {...props}>
       {showForm && (
       <PostForm hideForm={()=>setShowForm(false)}/>) ||
-        <Button onClick={()=>setShowForm(true)} name="Create Post" type="button"/>
+        <Button style={{position: "sticky"}} onClick={()=>setShowForm(true)} name="Create Post" type="button"/>
       }
       <Post posts={posts} />
     </div>
