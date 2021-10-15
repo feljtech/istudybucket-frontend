@@ -1,13 +1,7 @@
 import React from "react";
 import { Tab } from '@headlessui/react'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link, useLocation,
-  useRouteMatch,
-  useParams,
-} from "react-router-dom";
+import {Link} from "react-router-dom";
+import { PhoneIcon, PencilIcon, XIcon } from "@heroicons/react/outline";
 import image from "../../assets/img/bulb.jpg";
 import Post from "../../components/Post/Post";
 import Button from "../../__sub__/Button";
@@ -36,96 +30,145 @@ const Profile = () => {
         " Ut accusamus praesentium eveniet vel odio numquam voluptates, vero animi.",
     },
   ];
-  const location = useLocation();
-  const { path, url } = useRouteMatch();
-const {param} = useParams()
+  const [editProfile, setEditProfile] = React.useState(false)
   return (
     <div>
+      {
+        editProfile && (
+          <ProfileEdit hideEdit={()=>setEditProfile(false)} className="fixed top-10 left-0 w-full h-screen flex justify-center items-center backdrop-filter backdrop-blur backdrop-contrast-50 z-40" />
+        )
+      }
       <div className="w-full relative">
-        <div className="w-full h-56 bg-green-100" />
-        <div className="absolute bg-opacity-10 top-5">
-          <div className="sticky top-10 border-3 border-gray-800 z-20">
-            <div className="flex relative mx-16 ">
+        <div className="mb-2" >
+           <p className="font-bold text-lg p-4">User Profile</p>
+        </div>
+          <div className="border-3 mx-10 border-gray-800 block sm:flex justify-evenly">
+            <div className="flex relative ">
               <img
                 src={image}
                 alt=""
                 className="w-40 h-40 rounded-full border border-green-600"
               />
+              <div className="">
               <div className="self-center mx-3">
-                <p className="block font-bold">The Light bulb for {param}</p>
-                <p>
+                <p className="block font-bold">NDI LIONEL</p>
+
+                <div className="my-2">
+                  <p className="text-sm text-gray-800 ">Bio</p>
+                <p className="text-sm text-gray-500">
                   Purpose for the formation and lorem ipsum dorime catum ilusem
                   deli arder
                 </p>
-                <div className="py-2">
-                  <Button name="Request to join" />
+                </div>
+                <div onClick={()=>setEditProfile(true)} className="border border-gray-400 rounded-md bg-gray-100 hover:bg-gray-300 flex py-3 w-max cursor-pointer">
+                  <PencilIcon className="w-5 text-gray-800 hover:text-gray-900"/>
+                  <p className="self-center text-gray-700 hover:text-gray-800 px-2">Edit Profile</p>
                 </div>
               </div>
+            
+              </div>
+           
             </div>
+            <div className="border green-handle overflow-auto h-40 w-max mt-5 sm:mt-0 p-3 pt-0 rounded-lg sm:self-center shadow-md">
+                <p className="font-bold text-md text-center">Student Info</p>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">Username: </p>
+                  <p className="text-gray-700 self-center">@lionel </p>
+                </div>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">School: </p>
+                  <p className="text-gray-700 self-center">Uniba </p>
+                </div>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">Location: </p>
+                  <p className="text-gray-700 self-center">Space </p>
+                </div>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">Contact: </p>
+                  <div className="flex">
+                  <p className="text-gray-700 self-center">+237679561046 </p>
+                  <PhoneIcon className="w-5 cursor-pointer text-gray-800 hover:text-gray-900"/>
+                  </div>
+                </div>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">Field of study: </p>
+                  <p className="text-gray-700 self-center">CSE </p>
+                </div>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">Facebook: </p>
+                  <Link className="text-gray-700 self-center">null </Link>
+                </div>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">Twitter: </p>
+                  <Link className="text-gray-700 self-center italic">@spyke_lionel </Link>
+                </div>
+                <div className="flex justify-between mr-3">
+                  <p className="py-2 pr-4">Github: </p>
+                  <Link className="text-gray-700 self-center italic">@spykelion </Link>
+                </div>
+              </div>
           </div>
-        </div>
-        <Example />
-        <div className="mx-10 py-5">
-          <div className="my-1">
-            <div className="bg-blue-50 flex">
-              <Link
-                to={`${url}/posts`}
-                className="text-gray-700 font-medium mx-2 border-b-2 border-green-600"
-              >
-                Posts <span className="text-gray-500 text-xs px-2">24</span>
-              </Link>
-              <Link
-                to={`${url}/followers`}
-                className="text-gray-700 font-bold mx-2"
-              >
-                Followers
-                <span className="text-gray-500 text-xs px-2">24</span>
-              </Link>
-              <Link
-                to={`${url}/following`}
-                className="text-gray-700 font-bold mx-2"
-              >
-                Following
-                <span className="text-gray-500 text-xs px-2">24</span>
-              </Link>
-              <Link
-                to={`${path}/post/e23`}
-                className="text-gray-700 font-bold mx-2"
-              >
-                postid
-                <span className="text-gray-500 text-xs px-2">24</span>
-              </Link>
-            </div>
-          </div>
-        </div>
+<div className="bg-gray-200 shadow-lg w-full h-1 my-2"/>
+
+        <Activity />
       </div>
-      <Switch>
-        <Route exact path={`${path}/posts`}>
-          <div className="m-5 flex">
-           <div className="p-2">
-           <Post posts={posts} />
-           </div>
-           <div className="hidden green-handle h-screen overflow-y-auto w-1/2 md:block p-2 border border-gray-300">Some side nav</div>
-          </div>
-        </Route>
-        <Route exact path={`${path}/followers`}>
-          <h3>All users followers.</h3>
-        </Route>
-        <Route exact path={`${path}/following`}>
-          <h3>All user followings.</h3>
-        </Route>
-        <Route path={`${path}/post/:postId`}>
-          <PostID />
-        </Route>
-      </Switch>
     </div>
   );
 };
 
-const PostID = () =>{
-  let { postId } = useParams();
+export const ProfileEdit = ({hideEdit,...props}) =>{
   return (
-    <p>Some post {postId}</p>
+    <div  {...props}>
+      <div
+				id="overlay"
+				onClick={hideEdit}
+				className="absolute h-screen w-full -z-10"
+			/>
+      <form action="" className="border relative shadow-lg p-5 w-max z-50">
+        <XIcon onClick={hideEdit} className="cursor-pointer p-1 border rounded-full border-red-600 bg-white w-7 text-red-500 absolute top-0 right-0"/>
+        <div className="my-2 mx-3">
+          <label htmlFor="sname">Name: </label>
+          <input className="rounded" type="text" name="sname" />
+        </div>
+        <div className="my-2 mx-3">
+          <label htmlFor="school">School: </label>
+          <input className="school" type="text" name="sname" />
+        </div>
+        <div className="my-2 mx-3">
+          <label htmlFor="sname">Location: </label>
+          <input className="rounded" type="text" name="location" />
+        </div>
+        <div className="my-2 mx-3">
+          <label htmlFor="contact">Contact: </label>
+          <input className="rounded" type="text" name="contact" />
+         <div className=" text-center">
+         <label htmlFor="whatsapp" className="text-sm mr-2">Has got whatsapp?</label>
+          <input name="whatsapp" type="checkbox" className="self-center rounded-md ring-0 focus:ring-0 text-green-400" />
+         </div>
+         </div>
+         <div className="my-2 mx-3">
+          <label htmlFor="fos">Field of Study: </label>
+          <select name="fos" id="">
+            <option value="cse">CSE</option>
+            <option value="ce">CE</option>
+            <option value="fs">FS</option>
+          </select>
+        </div>
+        <div className="my-2 mx-3">
+          <label htmlFor="fb">Facebook username: </label>
+          <input className="rounded" type="text" name="fb" />
+        </div>
+        <div className="my-2 mx-3">
+          <label htmlFor="tw">Twitter username: </label>
+          <input className="rounded" type="text" name="tw" />
+        </div>
+        <div className="my-2 mx-3">
+          <label htmlFor="gh">Github username: </label>
+          <input className="rounded" type="text" name="gh" />
+        </div>
+        <Button name="Update Profile" type="submit"/>
+      </form>
+    </div>
   )
 }
 
@@ -134,9 +177,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export function Example() {
+export function Activity() {
   let [categories] = React.useState({
-    Recent: [
+    Posts: [
       {
         id: 1,
         title: 'Does drinking coffee make you smarter?',
@@ -152,8 +195,29 @@ export function Example() {
         commentCount: 3,
         shareCount: 2,
       },
+      {
+        id: 3,
+        title: "So you've bought coffee... now what?",
+        date: '2h ago',
+        commentCount: 3,
+        shareCount: 2,
+      },
+      {
+        id: 4,
+        title: "So you've bought coffee... now what?",
+        date: '2h ago',
+        commentCount: 3,
+        shareCount: 2,
+      },
+      {
+        id: 5,
+        title: "So you've bought coffee... now what?",
+        date: '2h ago',
+        commentCount: 3,
+        shareCount: 2,
+      },
     ],
-    Popular: [
+    Buckets: [
       {
         id: 1,
         title: 'Is tech making coffee better or worse?',
@@ -169,7 +233,7 @@ export function Example() {
         shareCount: 12,
       },
     ],
-    Trending: [
+    Others: [
       {
         id: 1,
         title: 'Ask Me Anything: 10 answers to your questions about coffee',
@@ -186,28 +250,28 @@ export function Example() {
       },
     ],
   })
-  const [at, setAt] = React.useState('')
+  const [at, setAt] = React.useState('Posts')
   const handleTabChange= (index) => {
     console.log('Changed selected tab to:', index)
-    setAt(Object.keys(categories).at(index))
+    setAt(Object.keys(categories)?.at(index))
   }
   return (
-    <div className="w-full max-w-md px-2 py-16 sm:px-0">
+    <div className="w-full max-w-md px-2 py-5 sm:px-0">
       <Tab.Group
        onChange={handleTabChange}
       >
-        <div className="text-red-400 p-4">{at}</div>
+        <div className=""><p className="p-5 m-3 font-bold">User Activity: {at}</p> </div>
         <Tab.List className="flex p-1 space-x-1 bg-blue-900/20 rounded-xl">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
               className={({ selected }) =>
                 classNames(
-                  'w-full py-2.5 text-sm leading-5 font-medium text-blue-700 rounded-lg',
-                  'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60',
+                  'w-full py-2.5 text-sm leading-5 font-bold hover:text-green-700 text-gray-800 rounded-lg',
+                  'focus:outline-none',
                   selected
-                    ? 'bg-white shadow'
-                    : 'text-blue-100 hover:bg-white/[0.12] hover:text-green-400'
+                    ? 'bg-white shadow border-b-2 border-green-900'
+                    : 'text-gray-600 hover:bg-white/[0.12] '
                 )
               }
             >

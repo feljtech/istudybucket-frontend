@@ -13,6 +13,9 @@ import Signup from "./components/signup/Signup";
 import Post from "./components/Post/Post";
 import { BrowserRouter as Router,useRouteMatch, Switch, Route, Link } from "react-router-dom";
 import BroadView from "./pages/bucket";
+import PostForm from "./components/Post/CreatePost";
+import Button from "./__sub__/Button";
+
 
 function App() {
   // const location = useLocation();
@@ -66,6 +69,7 @@ function App() {
 }
 
 export const Feed = ({ ...props }) => {
+  const [showForm, setShowForm] = React.useState(false)
   const posts = [
     {
       title: "Generous Knowlegde",
@@ -91,6 +95,10 @@ export const Feed = ({ ...props }) => {
   ];
   return (
     <div className="bg-white col-span-6 md:col-span-8 m-4" {...props}>
+      {showForm && (
+      <PostForm hideForm={()=>setShowForm(false)}/>) ||
+        <Button style={{position: "sticky"}} onClick={()=>setShowForm(true)} name="Create Post" type="button"/>
+      }
       <Post posts={posts} />
     </div>
   );
